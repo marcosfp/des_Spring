@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+
+<body>
+<nav th:replace="fragments/header_loader"></nav>
+
+	<div class="container my-2">
+		<div class="card">
+			<div class="card-body">
+			
+			<h1  >El perfil de usuario de  <p th:text="${session.username}"></p> </h1>
+				<div th:text="${session.idUsuario}"></div>
+				<div th:text="${session.username}"></div>
+				<div th:text="${session.email}"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
